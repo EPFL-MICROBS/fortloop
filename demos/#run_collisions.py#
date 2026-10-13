@@ -1,0 +1,23 @@
+import sys
+import logging
+from fortloop import Loop
+from fortloop.hooks.liveplot import LivePlot
+from fortloop.hooks.collision import Collisions
+
+logging.getLogger().setLevel(logging.INFO)
+
+f_hermes = "/home/matthias/Documents/experiments/la_manip_spring_2021/la_manip_16_03_2021.0000/tracking.0000.hermes"
+f_myrmidon = "/home/matthias/Documents/la_manip_analysis/la_manip_16_03_2021.myrmidon"
+
+liveplot = LivePlot(update_period_sec=1.0)
+collisions = Collisions()
+# fortloop = Loop([liveplot])
+fortloop = Loop([liveplot], f_myrmidon=f_myrmidon, collision_hooks=[)
+
+# Simulate fortloop with pre-recorded data
+# f_hermes = sys.argv[1]
+fortloop.simulate(f_hermes, simulate_period=0.2, zone_id=0)
+
+# Run retrieving data in realtime fro tracking host
+# host = sys.argv[1]
+# fortloop.run(host, zone_id=0)
