@@ -1,7 +1,7 @@
 """
 tracker_test.py
 
-utility to test real-time tracking with py-hermes
+utility to test real-time tracking with py_fort_hermes
 
 Travis Allen
 EPFL STI IGM MICROBS

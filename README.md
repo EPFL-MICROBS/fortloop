@@ -1,3 +1,27 @@
+# FORTloop MICROBS
+
+## How do I get setup?
+
+- Clone the repository
+- Run `pip install -r requirements.txt`
+
+## A basic example
+
+`src/fortloop/tracker_test.py` is a simple example that outputs current tracking data to the terminal from which it was run. 
+
+To run it, do the following:
+- Start an experiment on a host. This is done by writing your leto config .yml file and running the following command in a terminal:
+
+    `leto-cli start <hostname> </path/to/leto/config/file>`
+
+- This will bring up the camera view. Place some fiducial markers (from the family you specified in your config file) in the field of view; they should have red dots over them when they are detected.
+
+- Run `tracker_test.py` in a separate terminal: `python3 tracker_test.py`. This will print to the terminal each detected marker's (x,y,theta) tuple in pixel coordinates. 
+
+## Legacy documentation
+
+**The following documentation was written by the original author during the initial development of FORTloop and is preserved here for reference**
+
 = FORTloop =
 
 Intro.
