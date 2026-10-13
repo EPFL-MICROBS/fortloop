@@ -18,6 +18,10 @@ To run it, do the following:
 
 - Run `tracker_test.py` in a separate terminal: `python3 tracker_test.py`. This will print to the terminal each detected marker's (x,y,theta) tuple in pixel coordinates. 
 
+To stop the example, do the following:
+
+- In the terminal in which `tracker_test.py` is running, run `q <enter>`
+- In the terminal in which the experiment was started, run `leto-cli stop <hostname>`
 ## Legacy documentation
 
 **The following documentation was written by the original author during the initial development of FORTloop and is preserved here for reference**
